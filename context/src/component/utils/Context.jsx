@@ -9,7 +9,8 @@ const [products, setproducts] = useState(null)
 
 const getData = async ()=>{
     try{
-        const {data} = await axios.get("/products")
+        const   {data} = await axios.get("/products")
+     
         setproducts(data)
     }catch(err){
         console.log(err)

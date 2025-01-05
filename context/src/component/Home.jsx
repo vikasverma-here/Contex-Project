@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Navigation from './Navigation'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ProductContext } from '../component/utils/Context'
 import Loading from './Loading'
+import axios from 'axios'
 const Home = () => {
 
  const [products] = useContext(ProductContext)
-
 
   return (products ?
 <>
