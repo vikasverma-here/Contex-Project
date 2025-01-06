@@ -1,0 +1,7 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.printWidth": 80, // Set line length limit (e.g., 80 characters)
+    "prettier.tabWidth": 2 // Optional: Customize indentation size
+  }
+  

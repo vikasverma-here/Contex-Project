@@ -26,7 +26,7 @@ useEffect(()=>{
 
 
 function displayRating(rating) {
-  const maxStars = 5; 
+  const maxStars = 6; 
   let stars = '';
 
  
@@ -41,7 +41,9 @@ function displayRating(rating) {
   return stars;
 }
 
-
+const color = ()=>{
+  return (`rgba(${Math.floor(Math.random()*225)},${Math.floor(Math.random()*225)},${Math.floor(Math.random()*225)},0.4)` )
+}
 
   return single?(
     <div className="w-[90%] md:w-[70%] flex flex-col md:flex-row h-full mx-auto p-6 md:p-[10%] items-center bg-gray-50 shadow-md rounded-lg">
@@ -66,7 +68,7 @@ function displayRating(rating) {
         {single.description}
         </p>
         
-        <h4 className='mb-3 '> <strong className='text-green-600' >Rating</strong> {displayRating(single.rating.rate)} , <strong className='text-green-600' >Total Review</strong> :{single.rating.count}</h4>
+        <h4 className='mb-3 ' style={{color:color()}}> <strong className='text-green-600' >Rating</strong> {displayRating(single.rating.rate)} , <strong className='text-green-600' >Total Review</strong> :{single.rating.count}</h4>
         
         <div className="flex space-x-4">
           <Link

@@ -16,6 +16,8 @@ const getData = async ()=>{
         console.log(err)
     }
 }
+
+console.log(products)
 useEffect(()=>{
     getData()
 },[])
