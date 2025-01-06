@@ -1,7 +1,7 @@
 import React, {  useEffect,useState} from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import ProductDetailsShimmer from './ProductDetailsShimmer';
 import axios from './utils/axios';
 const Details = () => {
   const navigate = useNavigate();
@@ -42,9 +42,10 @@ function displayRating(rating) {
 }
 
 
+
   return single?(
     <div className="w-[90%] md:w-[70%] flex flex-col md:flex-row h-full mx-auto p-6 md:p-[10%] items-center bg-gray-50 shadow-md rounded-lg">
-    
+ 
       <img
         className="h-48 w-full md:h-[80%] md:w-[40%] object-contain rounded-lg border mb-6 md:mb-0"
         src={single.image}
@@ -84,7 +85,7 @@ function displayRating(rating) {
         </div>
       </div>
     </div>
-  ):(<h1>loading</h1>);
+  ):(<ProductDetailsShimmer/>);
 };
  
 export default Details;

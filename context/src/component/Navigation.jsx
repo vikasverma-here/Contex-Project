@@ -25,7 +25,7 @@ const color = ()=>{
        <h1 className='text-2xl mb-5   w-[80%]  font-bold ' >Catagory Filter :</h1>
       
        <div className='w-[80%]'>
-       <Link to='/' className='absolute px-8 left-[19.5%] top-[6%] text-2xl font-bold text-red-500  hover:text-blue-700 hover:scale-105 transition duration-300 font-bold ' >  Home</Link>
+       
        {ditinct_products.map((c,i)=>{
         return(
 <Link to={`/?category=${c}`} key={i} className='mb-3 flex items-center hover:text-blue-700 hover:scale-105 transition duration-300 font-bold '>
