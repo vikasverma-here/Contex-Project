@@ -8,19 +8,19 @@ const Navigation = () => {
   let ditinct_products=products && products.reduce((acc,cv)=>[...acc,cv.category], [])
 
 ditinct_products =[...new Set(ditinct_products)]
-// console.log(ditinct_products)
+
 
 const color = ()=>{
   return (`rgba(${Math.floor(Math.random()*225)},${Math.floor(Math.random()*225)},${Math.floor(Math.random()*225)},0.4)` )
 }
-// console.log(color())
+
 
   return (    
     
       <nav className='w-[20%] h-full  bg-zinc-100 flex flex-col items-center pt-5 ' >
-        <a href="/create" className='py-3 px-5 border rounded  border-blue-200 text-blue-300'>
+        <Link to="/create" className='py-3 px-5 border rounded  border-blue-200 text-blue-300'>
         Add New Product 
-        </a>
+        </Link>
         <hr className='my-3 w-[80%] border-gray-400' />
        <h1 className='text-2xl mb-5   w-[80%]  font-bold ' >Catagory Filter :</h1>
       

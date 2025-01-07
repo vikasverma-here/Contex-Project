@@ -4,9 +4,10 @@ import Home from './component/Home'
 import { Link } from 'react-router-dom'
 import Details from './component/Details'
 import Create from './component/Create'
+import Edit from './component/Edit'
 const App = () => {
   const {search,pathname} = useLocation();
-  console.log("search" ,  search, "pathname", pathname)
+  // console.log("search" ,  search, "pathname", pathname)
   
   return (
     <div className='h-screen w-screen flex '>
@@ -21,6 +22,7 @@ const App = () => {
   <Route path="/" element={<Home />} />
   <Route path="/details/:id" element={<Details />} />
   <Route path="/create" element={<Create />} />
+  <Route path="/edit/:id" element={<Edit />} />
 </Routes>
 
 

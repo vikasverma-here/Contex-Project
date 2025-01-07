@@ -5,22 +5,22 @@ import axios from './axios'
 const Context = ({children}) => {
 
   
-const [products, setproducts] = useState(null)
+const [products, setproducts] = useState(JSON.parse(localStorage.getItem("products"))||null)
 
-const getData = async ()=>{
-    try{
-        const   {data} = await axios.get("/products")
+// const getData = async ()=>{
+//     try{
+//         const   {data} = await axios.get("/products")
      
-        setproducts(data)
-    }catch(err){
-        console.log(err)
-    }
-}
+//         setproducts(data)
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
 
-console.log(products)
-useEffect(()=>{
-    getData()
-},[])
+// console.log(products)
+// useEffect(()=>{
+//     getData()
+// },[])
   return (
     <ProductContext.Provider value= {[products, setproducts]}>
  <h1>{children}</h1>
